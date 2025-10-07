@@ -14,6 +14,7 @@ body{
     border: 2px solid red;
     padding-top: 20vh;
     height: 500px;
+    width: 40vh;
 }
 
 .btn-div{
@@ -27,6 +28,6 @@ button{
 }
 
 input{
-    height: 10%;
-    padding:5px;
+    width: auto;
+    margin-left: 10vh;
 }

@@ -45,29 +45,34 @@
         })
 
         const btnsub = document.getElementById('btn-sub').addEventListener('click', () => {
-            console.log(num);
-            num -= num1;
+            if(num1 < num){
+                num = num - num1;
+            }
+            else{
+                num = num1-num;
+            }
             document.getElementById('result').textContent = num;
             document.getElementById('num1').value = 0; 
         })
 
-        const btnmulit = document.getElementById('btn-multi').addEventListener('click', () => {
-            console.log(num);
-            num *= num1;
-            document.getElementById('result').textContent = num;
-            document.getElementById('num1').value = 0; 
-        })
+        // const btnmulit = document.getElementById('btn-multi').addEventListener('click', () => {
+        // console.log(num);
+        // num *= num1;
+        // document.getElementById('result').textContent = num;
+        // document.getElementById('num1').value = 0; 
+        // })
 
-        const btndiv = document.getElementById('btn-div').addEventListener('click', () => {
-            console.log(num);
-            num /= num1;
-            document.getElementById('result').textContent = num;
-            document.getElementById('num1').value = 0; 
-        })
+        // const btndiv = document.getElementById('btn-div').addEventListener('click', () => {
+        //     console.log(num);
+        //     num /= num1;
+        //     document.getElementById('result').textContent = num;
+        //     document.getElementById('num1').value = 0; 
+        // })
 
         const btncls = document.getElementById('btn-cls').addEventListener('click',()=>{
             document.getElementById('result').textContent= 0;
             document.getElementById('num1').value = 0;
+            num = 0;
         })
     </script>
 </body>

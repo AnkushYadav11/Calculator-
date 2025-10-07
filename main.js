@@ -42,10 +42,17 @@ const btnmulti = document.getElementById('btn-multi').addEventListener('click', 
 })
 
 const btndiv = document.getElementById('btn-div').addEventListener('click', () => {
-    num = 0;
-    num /= num1;
-    document.getElementById('result').textContent = num;
-    document.getElementById('num1').value = 0;
+    if(num == 0){
+        num = 1;
+        num = num1 / num;
+        document.getElementById('result').textContent = num;
+        document.getElementById('num1').value = 0;
+    }
+    else{
+        num = num / num1;
+        document.getElementById('result').textContent = num;
+        document.getElementById('num1').value = 0;
+    }
 })
 const cls = document.getElementById('btn-cls').addEventListener('click', () => {
     document.getElementById('num1').value = 0;

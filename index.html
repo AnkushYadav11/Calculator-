@@ -1,50 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CalCulator</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="main-div">
         <input type="number" id="num1" placeholder="Enter Number 1">
-        <input type="number" id="num2" placeholder="Enter Number 2">
+        <h1>Result <span id="result"></span></h1>
         <div class="btn-div">
-            <button id="cls">Clear</button>
-            <button id="/">/</button>
-            <button id="*">*</button>
-            <button id="-">-</button>
-            <button id="0">0</button> 
-            <button id="1">1</button>
-            <button id="2">2</button>
-            <button id="+">+</button>
-            <button id="3">3</button>
-            <button id="4">4</button>
-            <button id="5">5</button>
-            <button id="=">=</button>
-            <button id="6">6</button>
-            <button id="7">7</button>
-            <button id="8">8</button>
-            <button id="9">9</button>
+            <button id="btn-cls">Clear</button>
+            <button id="btn-div">/</button>
+            <button id="btn-multi">*</button>
+            <button id="btn-sub">-</button>
+            <button id="btn-plus">+</button>
+            <!-- <button id="btn0">0</button> 
+            <button id="btn1">1</button>
+            <button id="btn2">2</button>
+            <button id="btn3">3</button>
+            <button id="btn=">=</button>
+            <button id="btn4">4</button>
+            <button id="btn5">5</button>
+            <button id="btn6">6</button>
+            <button id="btn7">7</button>
+            <button id="btn8">8</button>
+            <button id="btn9">9</button> -->
         </div>
     </div>
 
     <script>
-        const num1 = document.getElementById('num1').value;
-        const num2 = document.getElementById('num2').value;
-        const bt1= document.getElementById('1').value;
-        const bt2 = document.getElementById('2').value;
-        const bt3 = document.getElementById('3').value;
-        const bt4 = document.getElementById('4').value;
-        const bt5 = document.getElementById('5').value;
-        const bt6 = document.getElementById('6').value;
-        const bt7 = document.getElementById('7').value;
-        const bt8 = document.getElementById('8').value;
-        const bt9 = document.getElementById('9').value;
-        const bt0 = document.getElementById('0').value;
+        let num = 0;
+        let num1 = document.getElementById('num1').addEventListener('input', (e) => {
+            num1 = Number(e.target.value);
+        });
 
-    
-        </script>
+        const btnplus = document.getElementById('btn-plus').addEventListener('click', () => {
+            num += num1;
+            document.getElementById('result').textContent = num;
+            document.getElementById('num1').value = 0; 
+        })
+
+        const btnsub = document.getElementById('btn-sub').addEventListener('click', () => {
+            console.log(num);
+            num -= num1;
+            document.getElementById('result').textContent = num;
+            document.getElementById('num1').value = 0; 
+        })
+
+        const btnmulit = document.getElementById('btn-multi').addEventListener('click', () => {
+            console.log(num);
+            num *= num1;
+            document.getElementById('result').textContent = num;
+            document.getElementById('num1').value = 0; 
+        })
+
+        const btndiv = document.getElementById('btn-div').addEventListener('click', () => {
+            console.log(num);
+            num /= num1;
+            document.getElementById('result').textContent = num;
+            document.getElementById('num1').value = 0; 
+        })
+    </script>
 </body>
+
 </html>

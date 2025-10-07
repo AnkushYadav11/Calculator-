@@ -7,13 +7,12 @@ body{
     justify-content: center;
     align-items: center;
     height: 99vh;
-    border: 2px solid red;
-    background-color: aqua;
+    background-image: linear-gradient(to left top, rgb(214, 69, 187) , rgb(85, 85, 215)) ;
 }
 .main-div{
-    border: 2px solid red;
-    padding-top: 20vh;
-    height: 500px;
+    border: 2px solid white;
+    padding: 2vh;
+    height:45vh;
     width: 40vh;
 }
 
@@ -25,10 +24,20 @@ body{
 
 button{
     height: 50px;
+    background-color: rgb(193, 235, 235);
+    border-radius: 10px;
 }
 
 input{
     width: auto;
-    margin-left: 8vh;
-    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-left: 7vh;
+    padding: 15px;
+    background-color: transparent;
+    color: white;
+}
+
+h2{
+    color: white;
 }

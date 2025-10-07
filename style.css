@@ -1,0 +1,32 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+    border: 2px solid red;
+    background-color: aqua;
+}
+.main-div{
+    border: 2px solid red;
+    padding-top: 20vh;
+    height: 500px;
+}
+
+.btn-div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2px;
+}
+
+button{
+    height: 50px;
+}
+
+input{
+    height: 10%;
+    padding:5px;
+}
